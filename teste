@@ -1,0 +1,28 @@
+## Passo 5: Configurar a Pipeline no Painel do Jenkins
+
+<Sequence>
+  
+  <Step subtitle="No painel principal" title="Criar o Job">
+    Acesse o Jenkins pelo navegador, clique em **Novo Item** (New Item), digite um nome para o projeto, selecione a opção **Pipeline** e clique em **OK**.
+  </Step>
+  <Step subtitle="Configurações do projeto" title="Vincular o Repositório">
+    Role a página até a seção **Pipeline**. No campo *Definition*, mude de *Pipeline script* para **Pipeline script from SCM**. Em *SCM*, selecione **Git**.
+  </Step>
+  <Step subtitle="Credenciais" title="Informar a URL">
+    Cole a URL do seu repositório do GitHub no campo *Repository URL*. Se o repositório for privado, adicione suas credenciais de acesso logo abaixo.
+  </Step>
+  <Step subtitle="Padrão do Git" title="Ajustar a Branch">
+    No campo *Branch Specifier*, certifique-se de que está escrito */main (ou a branch correspondente onde subiu seu código). Verifique se o campo *Script Path* está preenchido como Jenkinsfile e clique em **Salvar**.
+  </Step>
+</Sequence>
+
+---
+
+## Passo 6: Executar e Coletar o Resultado
+No menu esquerdo do seu projeto no Jenkins, clique em **Construir Agora** (Build Now). 
+
+O Jenkins vai iniciar o processo. Você verá os estágios sendo concluídos um a um no gráfico de blocos. Quando a execução terminar com sucesso (ficar verde), o arquivo **Instalador_Tarefas_Setup.exe** aparecerá disponível logo no topo da página do build, na seção de **Artefatos**. 
+
+Basta baixá-lo, rodar na sua máquina e validar as janelas do assistente de instalação que você configurou.
+
+```

@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        PYTHON_PATH = "python"
+        PYTHON_PATH = "C:\\Users\\Rodrigo\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe"
         INNO_SUITE  = "C:\\Program Files (x86)\\Inno Setup 6\\ISCC.exe"
     }
 
